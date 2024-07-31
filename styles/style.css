@@ -148,13 +148,10 @@ ol {
     gap: 16px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox:after {
-    display: block;
-}
-
 .search-form__pseudo-checkbox {
-    position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 19px;
     height: 19px;
     border: 1px solid #fff;
@@ -163,11 +160,8 @@ ol {
 .search-form__pseudo-checkbox:active {
     border-color: #1b1919;
 }
-.search-form__pseudo-checkbox::after {
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
     content: "";
-    display: none;
-    position: absolute;
-    inset: 1px;
     width: 15px;
     height: 15px;
     background-color: #fff;
@@ -183,7 +177,6 @@ ol {
     font-size: 18px;
     font-weight: 700;
     font-family: Fira Sans Condensed, sans-serif;
-    /* position: relative; */
 }
 
 .button:hover {
@@ -214,12 +207,10 @@ ol {
 
 .content__details {
     width: 399px;
-    /* width: 100%; */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     gap: 20px;
-    /* flex-shrink: 0; */
 }
 
 .title {
